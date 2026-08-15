@@ -1,89 +1,44 @@
 # 🚗 CARVERSE
 
-### Get to know your car.
+**CARVERSE — A modern car encyclopedia to explore cars, specifications, performance, photos, and more.**
 
-CARVERSE is a modern, responsive car encyclopedia designed to help you explore vehicles from different manufacturers and discover their specifications, performance, features, and more.
+CARVERSE is a responsive automotive website for searching and exploring vehicles by manufacturer, model, category, and performance information.
 
-## ✨ Features
+## Features
 
-- 🔎 **Powerful car search**
-  - Search by manufacturer
-  - Search by model
-  - Search individual vehicles
+- 🔎 Search by manufacturer, model, category, engine, power and fuel
+- 🚘 Featured vehicles with individual specification views
+- 🏁 Performance, Sports, SUV, Luxury, Electric, Sedan and Pickup categories
+- 🌙 Light and dark mode
+- 🖼️ Vehicle photos
+- 📊 Vehicle specifications
+- 📱 Responsive phone and tablet layout
+- 💻 Laptop and desktop layout
+- 🌎 Manufacturer/model catalog
 
-- 🚘 **Large vehicle catalog**
-  - Honda
-  - Toyota
-  - BMW
-  - Mercedes-Benz
-  - Lamborghini
-  - Ferrari
-  - Porsche
-  - Audi
-  - Ford
-  - Nissan
-  - Tesla
-  - Lexus
-  - Volkswagen
-  - And many more
+## GitHub Pages
 
-- 📊 **Vehicle specifications**
-  - Engine
-  - Power
-  - Torque
-  - Drivetrain
-  - Transmission
-  - 0–100 km/h
-  - Top speed
-  - Fuel type
-  - Dimensions
-  - Weight
-  - Generation and model information
+CARVERSE is a static website and can be published directly with GitHub Pages. GitHub Pages uses an `index.html` in the publishing source.
 
-- 🏁 **Vehicle categories**
-  - Performance
-  - Sports
-  - SUV
-  - Luxury
-  - Electric
-  - Sedan
-  - Pickup
-  - Other
+Repository: https://github.com/salarkhurram989/CARVERSE
 
-- 🖼️ **Vehicle photos**
+Project URL after Pages is enabled:
 
-- 🌙 **Light & Dark Mode**
+https://salarkhurram989.github.io/CARVERSE/
 
-- 📱 **Fully responsive**
-  - Desktop
-  - Laptop
-  - Tablet
-  - Mobile
+## Technologies
 
-- ⚡ **Fast and clean interface**
+- HTML5
+- CSS3
+- JavaScript
+- GitHub Pages
 
-## 🎨 Design
+## Data and images
 
-CARVERSE uses a modern automotive dashboard style with a clean interface, strong typography, responsive cards, and a light/dark theme.
+Some vehicle data and images come from external sources. Their own licensing and attribution requirements apply. CARVERSE does not claim ownership of third-party vehicle marks, specifications, or photographs.
 
-## 🌐 GitHub Pages
+## Goal
 
-CARVERSE is designed to run as a static website using GitHub Pages.
+Make it easy to search for a car and quickly understand what it is, how it performs, and what specifications it has.
 
-After enabling GitHub Pages, the website can be accessed at:
-
-`https://YOUR-USERNAME.github.io/CARVERSE/`
-
-It can also be embedded into Google Sites using:
-
-**Google Sites → Insert → Embed → By URL**
-
-## 📁 Project Structure
-
-```text
-CARVERSE/
-├── index.html
-├── README.md
-└── assets/
-    ├── images/
-    └── logo/
+**Get to know your car. 🚗**
