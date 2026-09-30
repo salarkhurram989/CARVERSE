@@ -1,1 +1,86 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CARVERSE</title><style>body{margin:0;background:#0b0d10;color:#fff;font-family:system-ui;text-align:center;padding-top:20vh}p{color:#a4acb9}</style></head><body><h2>Loading CARVERSE…</h2><p>Preparing the car encyclopedia.</p><script>(async()=>{try{const u='https://raw.githubusercontent.com/salarkhurram989/CARVERSE/a1b43336712ec55118442a09a054e98cd55b0eac/index.html';let r=await fetch(u,{cache:'no-store'});if(!r.ok)throw 0;let h=await r.text();h=h.replace('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=85','https://commons.wikimedia.org/wiki/Special:FilePath/Honda_CIVIC_TYPE_R_(6BA-FL5)_front.jpg?width=1200');document.open();document.write(h);document.close()}catch(e){document.body.innerHTML='<h2>CARVERSE could not load</h2><p>Please refresh the page.</p>'}})();</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b0f">
+<title>CARVERSE — Explore Cars</title>
+<style>
+:root{--bg:#080a0d;--panel:#10141a;--panel2:#151a21;--text:#f5f7fa;--muted:#929ba8;--line:#252c35;--accent:#e8edf3;--shadow:0 20px 60px #0008}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 70% -10%,#26303d 0,#080a0d 35%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input,select{font:inherit}button{cursor:pointer}
+header{position:sticky;top:0;z-index:20;background:#080a0dcc;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{max-width:1240px;margin:auto;padding:15px 20px;display:flex;align-items:center;gap:20px}.brand{font-size:20px;font-weight:900;letter-spacing:3px}.brand span{color:#8f9aaa}.navlinks{display:flex;gap:18px;margin-left:auto}.navlinks a{color:var(--muted);text-decoration:none;font-size:14px}.navlinks a:hover{color:#fff}.iconbtn{border:1px solid var(--line);background:#11161d;color:#fff;border-radius:11px;padding:9px 11px}
+.hero{max-width:1240px;margin:0 auto;padding:70px 20px 35px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}.eyebrow{color:#aeb8c5;font-size:12px;letter-spacing:3px;font-weight:800}.hero h1{font-size:clamp(42px,7vw,82px);line-height:.92;margin:12px 0 20px;letter-spacing:-4px}.hero p{max-width:600px;color:var(--muted);font-size:17px;line-height:1.7}.heroBtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.primary,.secondary{border-radius:12px;padding:12px 17px;border:1px solid var(--line);font-weight:800}.primary{background:#f4f6f8;color:#090b0f}.secondary{background:#11161d;color:#fff}
+.heroCar{height:370px;border-radius:24px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:var(--shadow);background:#111}.heroCar img{width:100%;height:100%;object-fit:cover;display:block}.heroCar:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#080a0d 0%,transparent 45%,#080a0d33)}
+.wrap{max-width:1240px;margin:auto;padding:0 20px 60px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:25px 0}.search{flex:1;min-width:220px;background:#11161d;border:1px solid var(--line);color:#fff;padding:13px 15px;border-radius:12px;outline:none}.select{background:#11161d;color:#fff;border:1px solid var(--line);padding:13px;border-radius:12px}.sectionTitle{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:35px 0 18px}.sectionTitle h2{margin:0;font-size:28px}.sectionTitle small{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.stat{background:#0f1319;border:1px solid var(--line);border-radius:16px;padding:17px}.stat b{display:block;font-size:23px}.stat span{color:var(--muted);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(180deg,#12171e,#0d1015);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.22s;position:relative}.card:hover{transform:translateY(-5px);border-color:#48515e;box-shadow:0 18px 50px #0008}.photo{height:210px;position:relative;background:#1a2028}.photo img{width:100%;height:100%;object-fit:cover;display:block}.badge{position:absolute;left:12px;top:12px;background:#090b0dcc;border:1px solid #ffffff22;padding:6px 9px;border-radius:9px;font-size:11px;font-weight:800}.fav{position:absolute;right:12px;top:12px;width:36px;height:36px;border-radius:50%;border:1px solid #ffffff22;background:#090b0dcc;color:#fff}.fav.active{background:#fff;color:#000}.cardBody{padding:17px}.maker{font-size:11px;color:#8e98a5;letter-spacing:1.5px;font-weight:800}.name{font-size:22px;font-weight:900;margin:4px 0 10px}.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.spec{background:#171c23;border-radius:9px;padding:9px}.spec small{display:block;color:#7f8996;font-size:9px;text-transform:uppercase}.spec b{font-size:12px}.cardFoot{display:flex;justify-content:space-between;align-items:center;margin-top:14px}.price{font-weight:900}.view{border:0;background:#e9edf1;color:#090b0f;padding:9px 12px;border-radius:9px;font-weight:900}
+.compareBar{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:30;background:#f1f3f5;color:#080a0d;border-radius:16px;padding:11px 14px;display:none;align-items:center;gap:12px;box-shadow:0 15px 50px #0009}.compareBar.show{display:flex}.compareBar button{border:0;background:#090b0d;color:#fff;border-radius:9px;padding:8px 12px}
+.modal{position:fixed;inset:0;background:#000b;backdrop-filter:blur(10px);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modalBox{width:min(900px,100%);max-height:90vh;overflow:auto;background:#0d1117;border:1px solid #303844;border-radius:22px;box-shadow:var(--shadow)}.modalTop{display:grid;grid-template-columns:1fr 1fr}.modalTop img{width:100%;height:310px;object-fit:cover}.modalInfo{padding:28px}.close{float:right;border:1px solid var(--line);background:#151a21;color:#fff;border-radius:9px;padding:7px 10px}.modalInfo h2{font-size:38px;margin:25px 0 5px}.modalInfo p{color:var(--muted)}.detailGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:20px}.detail{padding:12px;background:#151a21;border-radius:10px}.detail span{display:block;color:#7e8794;font-size:10px;text-transform:uppercase}.detail b{font-size:14px}.compareTable{padding:25px;display:none}.compareTable.show{display:block}.compareTable table{width:100%;border-collapse:collapse}.compareTable th,.compareTable td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}.compareTable th{color:#aeb7c3}
+footer{border-top:1px solid var(--line);padding:35px 20px;color:#6f7885;text-align:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.heroCar{height:300px}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.modalTop{grid-template-columns:1fr}}
+@media(max-width:560px){.hero{padding-top:45px}.hero h1{letter-spacing:-2px}.heroCar{height:240px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.photo{height:220px}.toolbar>*{width:100%}.nav{padding:12px 15px}.wrap,.hero{padding-left:15px;padding-right:15px}.modalInfo h2{font-size:30px}}
+</style>
+</head>
+<body>
+<header><nav class="nav"><div class="brand">CAR<span>VERSE</span></div><div class="navlinks"><a href="#explore">Explore</a><a href="#compare">Compare</a><a href="#about">About</a></div><button class="iconbtn" id="themeBtn" title="Toggle theme">◐</button></nav></header>
+
+<section class="hero">
+<div><div class="eyebrow">THE DIGITAL CAR ENCYCLOPEDIA</div><h1>Find your<br>next car.</h1><p>Explore performance cars, supercars, EVs, SUVs and icons with photos, specifications and quick comparisons — all inside one fast CARVERSE.</p><div class="heroBtns"><button class="primary" onclick="document.querySelector('#search').focus()">Explore cars ↓</button><button class="secondary" onclick="randomCar()">Surprise me</button></div><div class="stats"><div class="stat"><b id="count">12+</b><span>Cars in catalog</span></div><div class="stat"><b>8</b><span>Categories</span></div><div class="stat"><b>0–100</b><span>Performance data</span></div><div class="stat"><b>100%</b><span>Responsive</span></div></div></div>
+<div class="heroCar"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85" alt="Porsche sports car"></div>
+</section>
+
+<main class="wrap" id="explore">
+<div class="sectionTitle"><div><h2>Explore the collection</h2><small>Search, filter and open any car for full details.</small></div></div>
+<div class="toolbar"><input id="search" class="search" placeholder="Search Porsche, BMW, electric, SUV, 500 hp..." oninput="render()"><select id="category" class="select" onchange="render()"><option value="all">All categories</option><option>Sports</option><option>Supercar</option><option>Luxury</option><option>Electric</option><option>SUV</option><option>Performance</option><option>Muscle</option><option>JDM</option></select><select id="sort" class="select" onchange="render()"><option value="featured">Featured</option><option value="power">Power</option><option value="speed">Top speed</option><option value="priceLow">Price: low</option><option value="priceHigh">Price: high</option></select></div>
+<div class="grid" id="grid"></div>
+
+<section id="compare" class="compareTable"><div class="sectionTitle"><h2>Compare</h2><button class="secondary" onclick="clearCompare()">Clear</button></div><div id="compareContent"></div></section>
+</main>
+
+<div class="compareBar" id="compareBar"><span id="compareText">0 selected</span><button onclick="showCompare()">Compare</button></div>
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modalBox" id="modalBox"></div></div>
+<footer id="about">CARVERSE · Built by SALARX · Explore. Compare. Drive.</footer>
+
+<script>
+const cars=[
+{id:1,make:"Porsche",name:"911 Carrera",cat:"Sports",power:379,speed:293,zero:"4.0s",price:116080,img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85",engine:"3.0L Twin-Turbo Flat-6",drive:"RWD",fuel:"Petrol"},
+{id:2,make:"BMW",name:"M4 Competition",cat:"Performance",power:503,speed:290,zero:"3.8s",price:85695,img:"https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=85",engine:"3.0L Twin-Turbo I6",drive:"RWD",fuel:"Petrol"},
+{id:3,make:"Lamborghini",name:"Huracán EVO",cat:"Supercar",power:631,speed:325,zero:"2.9s",price:261274,img:"https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=85",engine:"5.2L V10",drive:"AWD",fuel:"Petrol"},
+{id:4,make:"Ferrari",name:"488 GTB",cat:"Supercar",power:661,speed:330,zero:"3.0s",price:333750,img:"https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1200&q=85",engine:"3.9L Twin-Turbo V8",drive:"RWD",fuel:"Petrol"},
+{id:5,make:"Ford",name:"Mustang GT",cat:"Muscle",power:480,speed:250,zero:"4.3s",price:43565,img:"https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?auto=format&fit=crop&w=1200&q=85",engine:"5.0L V8",drive:"RWD",fuel:"Petrol"},
+{id:6,make:"Nissan",name:"GT-R",cat:"JDM",power:565,speed:315,zero:"2.9s",price:121090,img:"https://images.unsplash.com/photo-1614200187524-dc4b892acf16?auto=format&fit=crop&w=1200&q=85",engine:"3.8L Twin-Turbo V6",drive:"AWD",fuel:"Petrol"},
+{id:7,make:"Audi",name:"R8 V10 Performance",cat:"Performance",power:602,speed:331,zero:"3.1s",price:206895,img:"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1200&q=85",engine:"5.2L V10",drive:"AWD",fuel:"Petrol"},
+{id:8,make:"McLaren",name:"720S",cat:"Supercar",power:710,speed:341,zero:"2.9s",price:299000,img:"https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&w=1200&q=85",engine:"4.0L Twin-Turbo V8",drive:"RWD",fuel:"Petrol"},
+{id:9,make:"Tesla",name:"Model S Plaid",cat:"Electric",power:1020,speed:322,zero:"2.1s",price:89990,img:"https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1200&q=85",engine:"Tri-Motor Electric",drive:"AWD",fuel:"Electric"},
+{id:10,make:"Mercedes-AMG",name:"GT 63 S",cat:"Luxury",power:831,speed:315,zero:"2.9s",price:179900,img:"https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1200&q=85",engine:"4.0L Twin-Turbo V8 Hybrid",drive:"AWD",fuel:"Hybrid"},
+{id:11,make:"Toyota",name:"GR Supra",cat:"Sports",power:382,speed:250,zero:"3.9s",price:56170,img:"https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=85",engine:"3.0L Turbo I6",drive:"RWD",fuel:"Petrol"},
+{id:12,make:"Land Rover",name:"Defender 110",cat:"SUV",power:395,speed:191,zero:"6.1s",price:62675,img:"https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=85",engine:"3.0L Turbo I6",drive:"AWD",fuel:"Petrol"}
+];
+let favorites=JSON.parse(localStorage.getItem("carverse-favs")||"[]"), compare=[];
+const money=n=>"$"+n.toLocaleString();
+function render(){
+ let q=document.querySelector("#search").value.toLowerCase(), c=document.querySelector("#category").value, s=document.querySelector("#sort").value;
+ let list=cars.filter(x=>(c==="all"||x.cat===c)&&(!q||Object.values(x).join(" ").toLowerCase().includes(q)));
+ list.sort((a,b)=>s==="power"?b.power-a.power:s==="speed"?b.speed-a.speed:s==="priceLow"?a.price-b.price:s==="priceHigh"?b.price-a.price:a.id-b.id);
+ document.querySelector("#grid").innerHTML=list.map(card).join("");
+ document.querySelector("#count").textContent=cars.length+"+";
+ updateCompare();
+}
+function card(x){
+ let fav=favorites.includes(x.id), sel=compare.includes(x.id);
+ return '<article class="card"><div class="photo"><img loading="lazy" src="'+x.img+'" alt="'+x.make+' '+x.name+'"><span class="badge">'+x.cat+'</span><button class="fav '+(fav?"active":"")+'" onclick="toggleFav('+x.id+')" title="Favorite">'+(fav?"★":"☆")+'</button></div><div class="cardBody"><div class="maker">'+x.make.toUpperCase()+'</div><div class="name">'+x.name+'</div><div class="specs"><div class="spec"><small>Power</small><b>'+x.power+' hp</b></div><div class="spec"><small>0–100</small><b>'+x.zero+'</b></div><div class="spec"><small>V-max</small><b>'+x.speed+' km/h</b></div></div><div class="cardFoot"><span class="price">'+money(x.price)+'</span><div><button class="secondary" onclick="toggleCompare('+x.id+')" style="padding:8px;margin-right:5px">'+(sel?"✓":"Compare")+'</button><button class="view" onclick="openCar('+x.id+')">View</button></div></div></div></article>';
+}
+function toggleFav(id){favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];localStorage.setItem("carverse-favs",JSON.stringify(favorites));render()}
+function toggleCompare(id){if(compare.includes(id))compare=compare.filter(x=>x!==id);else if(compare.length<3)compare.push(id);render()}
+function updateCompare(){let b=document.querySelector("#compareBar");b.classList.toggle("show",compare.length>0);document.querySelector("#compareText").textContent=compare.length+" selected"}
+function openCar(id){let x=cars.find(c=>c.id===id);document.querySelector("#modalBox").innerHTML='<div class="modalTop"><img src="'+x.img+'" alt="'+x.make+' '+x.name+'"><div class="modalInfo"><button class="close" onclick="closeModal()">✕</button><div class="maker">'+x.make.toUpperCase()+'</div><h2>'+x.name+'</h2><p>'+x.cat+' · '+x.fuel+' · '+x.drive+'</p><div class="detailGrid"><div class="detail"><span>Engine</span><b>'+x.engine+'</b></div><div class="detail"><span>Power</span><b>'+x.power+' hp</b></div><div class="detail"><span>Top speed</span><b>'+x.speed+' km/h</b></div><div class="detail"><span>0–100 km/h</span><b>'+x.zero+'</b></div><div class="detail"><span>Starting price</span><b>'+money(x.price)+'</b></div><div class="detail"><span>Drivetrain</span><b>'+x.drive+'</b></div></div></div></div>';document.querySelector("#modal").classList.add("show")}
+function closeModal(){document.querySelector("#modal").classList.remove("show")}
+function showCompare(){if(!compare.length)return;let chosen=cars.filter(x=>compare.includes(x.id));document.querySelector("#compare").classList.add("show");document.querySelector("#compareContent").innerHTML='<table><tr><th>Spec</th>'+chosen.map(x=>'<th>'+x.make+' '+x.name+'</th>').join("")+'</tr>'+["power","speed","zero","price","engine","drive"].map(k=>'<tr><td>'+({power:"Power",speed:"Top speed",zero:"0–100 km/h",price:"Price",engine:"Engine",drive:"Drive"}[k])+'</td>'+chosen.map(x=>'<td>'+({power:x.power+" hp",speed:x.speed+" km/h",zero:x.zero,price:money(x.price),engine:x.engine,drive:x.drive}[k])+'</td>').join("")+'</tr>').join("")+'</table>';document.querySelector("#compare").scrollIntoView({behavior:"smooth"})}
+function clearCompare(){compare=[];document.querySelector("#compare").classList.remove("show");updateCompare();render()}
+function randomCar(){openCar(cars[Math.floor(Math.random()*cars.length)].id)}
+document.querySelector("#themeBtn").onclick=()=>{document.body.classList.toggle("light");document.body.style.background=document.body.classList.contains("light")?"#eef1f4":"radial-gradient(circle at 70% -10%,#26303d 0,#080a0d 35%)";document.body.style.color="#fff"};
+render();
+</script>
+</body>
+</html>
